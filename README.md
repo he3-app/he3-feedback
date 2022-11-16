@@ -1,17 +1,9 @@
-# he3-community
-He3.App Community Announcement &amp; Discussion
+# He3 App Community
 
-## Installation
-
-You can download He3 app at: TODO
-
-## Usage
-
-See this doc: TODO
-
-## Discussion
-
+Welcome to He3 App community! Here you can discuss topics, share ideas, ask questions about He3. 
 You are welcome to create [issues](https://github.com/he3-app/he3-community/issues) for any issue you encountered or question you had.
 
-Join our WeChat: TODO
-Join our Discord channel: TODO
+He3 homepage: [he3.app](https://he3.app/)
+
+You can also contact us via contact@h8r.io
+

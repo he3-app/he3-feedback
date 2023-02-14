@@ -1,10 +1,10 @@
-# He3 App Feedback
+# He3 App Feedback Forum
 
-Welcome to He3 App Feedback!
-
-You are welcome to create [issues](https://github.com/he3-app/he3-community/issues) to ask questions, share ideas, and discuss topics.
+We're thrilled to have you here in He3 App Feedback Forum! We invite you to share your thoughts and join the conversation by creating [issues](https://github.com/he3-app/he3-community/issues), asking questions, sharing ideas, and discussing a wide range of topics. Everyone's input is valued and appreciated.
 
 He3 homepage: [he3.app](https://he3.app/)
+
+Our Discord channel: https://discord.gg/F9QyJdVTwC
 
 Our contact email: contact@h8r.io
 

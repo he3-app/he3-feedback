@@ -13,18 +13,18 @@ jobs:
       - name: Send message
         run: |
           generate_post_data(){
-            text="有新的 Discussion"
-            if [ ${{ github.event_name }} == "issues" ]; then
-              text="有新的 Issue"
-            fi
-            cat <<EOF
-            {
-                "msg_type": "text",
-                "content": {
-                    "text": "$text"
-                }
-            }
-            EOF
+          text="有新的 Discussion"
+          if [ ${{ github.event_name }} == "issues" ]; then
+            text="有新的 Issue"
+          fi
+          cat <<EOF
+          {
+              "msg_type": "text",
+              "content": {
+                  "text": "$text"
+              }
+          }
+          EOF
           }
           curl -X POST -H "Content-Type: application/json" \
           -d "$(generate_post_data)" \

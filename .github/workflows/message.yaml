@@ -17,5 +17,5 @@ jobs:
             text="有新的 Issue"
           fi
           curl -X POST -H "Content-Type: application/json" \
-          -d '{"msg_type":"text","content":{"text":"'$text'"}}' \
+          -d '{"msg_type":"text","content":{"text":'$text'}}' \
           https://open.feishu.cn/open-apis/bot/v2/hook/${{ secrets.FEISHU_BOT_WEBHOOK_URL }}

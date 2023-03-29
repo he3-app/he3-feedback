@@ -12,10 +12,20 @@ jobs:
     steps:
       - name: Send message
         run: |
-          text="有新的 Discussion"
-          if [ ${{ github.event_name }} == "issues" ]; then
-            text="有新的 Issue"
-          fi
+          generate_post_data(){
+            text="有新的 Discussion"
+            if [ ${{ github.event_name }} == "issues" ]; then
+              text="有新的 Issue"
+            fi
+            cat <<EOF
+            {
+                "msg_type": "text",
+                "content": {
+                    "text": "$text"
+                }
+            }
+            EOF
+          }
           curl -X POST -H "Content-Type: application/json" \
-          -d '{"msg_type":"text","content":{"text":'$text'}}' \
+          -d "$(generate_post_data)" \
           https://open.feishu.cn/open-apis/bot/v2/hook/${{ secrets.FEISHU_BOT_WEBHOOK_URL }}

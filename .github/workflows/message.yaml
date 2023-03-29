@@ -1,0 +1,22 @@
+name: Issue and Discussions Trigger
+
+on:
+  issues:
+    types: [opened]
+  discussion:
+    types: [created]
+
+jobs:
+  curl_command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute curl command
+        run: |
+          if [ ${{ github.event_name }} == "issues" ]; then
+            text="有新的 Issue"
+          else [ ${{ github.event_name }} == "discussion" ]; then
+            text="有新的 Discussion"
+          fi
+          curl -X POST -H "Content-Type: application/json" \
+              -d '{"msg_type":"text","content":{"text":"'$text'"}}' \
+              https://open.feishu.cn/open-apis/bot/v2/hook/${{ secrets.FEISHU_BOT_WEBHOOK_URL }}

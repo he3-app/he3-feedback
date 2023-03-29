@@ -7,16 +7,15 @@ on:
     types: [created]
 
 jobs:
-  curl_command:
+  send_message:
     runs-on: ubuntu-latest
     steps:
       - name: Send message
         run: |
+          text="有新的 Discussion"
           if [ ${{ github.event_name }} == "issues" ]; then
             text="有新的 Issue"
-          else [ ${{ github.event_name }} == "discussion" ]
-            text="有新的 Discussion"
           fi
           curl -X POST -H "Content-Type: application/json" \
-              -d '{"msg_type":"text","content":{"text":"'$text'"}}' \
-              https://open.feishu.cn/open-apis/bot/v2/hook/${{ secrets.FEISHU_BOT_WEBHOOK_URL }}
+          -d '{"msg_type":"text","content":{"text":"'$text'"}}' \
+          https://open.feishu.cn/open-apis/bot/v2/hook/${{ secrets.FEISHU_BOT_WEBHOOK_URL }}

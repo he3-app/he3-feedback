@@ -10,11 +10,11 @@ jobs:
   curl_command:
     runs-on: ubuntu-latest
     steps:
-      - name: Execute curl command
+      - name: Send message
         run: |
           if [ ${{ github.event_name }} == "issues" ]; then
             text="有新的 Issue"
-          else [ ${{ github.event_name }} == "discussion" ]; then
+          else [ ${{ github.event_name }} == "discussion" ]
             text="有新的 Discussion"
           fi
           curl -X POST -H "Content-Type: application/json" \

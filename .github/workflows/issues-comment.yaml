@@ -6,7 +6,7 @@ on:
 
 jobs:
   check_comment:
-    runs-on: ubuntu-latest
+    runs-on: ["self-hosted","Linux","x64"]
     if: github.event.comment.user.login == 'lyzhang1999'
     steps:
     - name: Checkout repository
@@ -23,5 +23,6 @@ jobs:
         APP_ID: ${{ secrets.APP_ID }}
         APP_SECRET: ${{ secrets.APP_SECRET }}
       run: |
-        pip3 install scripts/python/requirements.txt
-        python3 scripts/python/create_feedback.py ${{ github.event.issue.number }}
+        cd scripts/python
+        pip3 install -r requirements.txt
+        python3 create_feedback.py ${{ github.event.issue.number }}

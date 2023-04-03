@@ -65,7 +65,7 @@ response = requests.post(url, headers=headers, json=json_body)
 
 if response.status_code == 200:
     comment_url = f"https://api.github.com/repos/{org}/{repo}/issues/{issue_id}/comments"
-    comment_body = f"感谢您的反馈，该问题已经反馈给产品部门，优先级为{priority}，请留意 issues 进度。"
+    comment_body = f"感谢您的反馈，产品部门正在加紧处理，优先级为{priority}，请留意 issues 进度。"
     response = requests.post(comment_url, headers=github_headers, json={
                              "body": comment_body})
     if response.status_code == 201:

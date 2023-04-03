@@ -6,7 +6,7 @@ issue_id = sys.argv[1]
 
 org = "he3-app"
 repo = "he3-feedback"
-token = os.environ["GITHUB_TOKEN"]
+token = os.environ["PERSON_GITHUB_TOKEN"]
 
 github_headers = {
     "Authorization": f"token {token}",

@@ -6,7 +6,7 @@ on:
 
 jobs:
   check_comment:
-    runs-on: [self-hosted, X64, Linux]
+    runs-on: ubuntu-latest
     if: github.event.comment.user.login == 'lyzhang1999'
     steps:
     - name: Checkout repository

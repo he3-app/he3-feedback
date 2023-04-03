@@ -18,6 +18,10 @@ jobs:
         python-version: 3.x
 
     - name: Run create_feedback.py
+      env:
+        GITHUB_TOKEN: ${{ secrets.PERSON_GITHUB_TOKEN }}
+        APP_ID: ${{ secrets.APP_ID }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
       run: |
         pip3 install scripts/python/requirements.txt
         python3 scripts/python/create_feedback.py ${{ github.event.issue.number }}

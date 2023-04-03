@@ -58,7 +58,7 @@ json_body = {
         "状态": "待评估",
         "反馈类型": labels,
         "GitHub": f"https://github.com/{org}/{repo}/issues/{issue_id}",
-        "Owner": [{"id": "ou_ef12fa991e256e0d82fbcb4d8eb81ff3"}],
+        "Owner": [{"id": "ou_a22d5123cbfad181fd14e7d467e2c0f6"}],
     },
 }
 response = requests.post(url, headers=headers, json=json_body)

@@ -8,7 +8,6 @@ body:
     id: tools
     attributes:
       label: Description of new tools or features
-      description: Description of new tools or features
       value: |
         ## Description of new tools or features
         ## Scenarios for use

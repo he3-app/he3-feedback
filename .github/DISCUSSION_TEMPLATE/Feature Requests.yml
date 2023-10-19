@@ -2,9 +2,9 @@ title: "[Feature Requests]"
 labels: ["Feature Requests"]
 body:
   - type: input
-    description: "One sentence introduction the new tool or function"
+    label: "One sentence introduction the new tool or function"
   - type: markdown
-    description: "Detailed descriptions of new tools or features, it would be nice to refer to links or screenshots"
+    key: markdown
   - type: dropdown
     attributes:
       label: Systems

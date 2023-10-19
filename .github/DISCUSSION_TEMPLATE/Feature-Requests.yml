@@ -14,7 +14,7 @@ body:
         ## Link or screenshot
   - type: dropdown
     attributes:
-      label: Systems
+      label: System you are using
       options:
         - Windows
         - macOS silicon

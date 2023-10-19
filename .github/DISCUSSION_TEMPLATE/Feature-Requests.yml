@@ -4,10 +4,13 @@ body:
   - type: input
     attributes:
       label: "One sentence introduction the new tool or function"
-  - type: markdown
+  - type: textarea
+    id: tools
     attributes:
+      label: Description of new tools or features
+      description: Description of new tools or features
       value: |
-        ## Tools or features describtion
+        ## Description of new tools or features
         ## Scenarios for use
         ## Link or screenshot
   - type: dropdown

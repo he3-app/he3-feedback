@@ -3,7 +3,7 @@ labels: ["Feature Requests"]
 body:
   - type: input
     attributes:
-      label: "One sentence introduction the new tool or function"
+      label: "One sentence introduction the new tool or features"
   - type: textarea
     id: tools
     attributes:

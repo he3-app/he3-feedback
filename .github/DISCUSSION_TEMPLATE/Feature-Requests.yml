@@ -6,7 +6,10 @@ body:
       label: "One sentence introduction the new tool or function"
   - type: markdown
     attributes:
-      value: "Detailed descriptions of new tools or features, it would be nice to refer to links or screenshots"
+      value: |
+        ## Tools or features describtion
+        ## Scenarios for use
+        ## Link or screenshot
   - type: dropdown
     attributes:
       label: Systems

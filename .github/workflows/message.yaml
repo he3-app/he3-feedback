@@ -13,9 +13,9 @@ jobs:
       - name: Send message
         run: |
           generate_post_data(){
-          text="有新的 Discussion"
+          text="有新的 Discussion: https://github.com/he3-app/he3-feedback/issues/new?created_from_discussion_number=${{ github.event.discussion.number }}"
           if [ ${{ github.event_name }} == "issues" ]; then
-            text="有新的 Issue"
+            text="有新的 Issue: https://github.com/he3-app/he3-feedback/issues/${{ github.event.issue.number }}"
           fi
           cat <<EOF
           {
